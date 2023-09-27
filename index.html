@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurav - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="index.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(5, 5, 90);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .right {
+            overflow: hidden;
+            background-color: #191556;
+        }
+
+        .right a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .right a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .right a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        .right .icon {
+            display: none;
+        }
+
+        /* nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(3, 3, 58);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(149, 149, 228);
+            font-size: 1.02rem;
+        } */
+
+        .left {
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 110px 0;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 1.6rem;
+
+        }
+
+        .leftSection .buttons {
+            padding: 15px 0;
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            margin: 12px 0;
+            background: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .leftSection .btn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .rightSection img {
+            width: 75%;
+        }
+
+        .purple {
+            color: rgb(168, 109, 223);
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        #element {
+            color: rgb(168, 109, 223);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.6rem;
+        }
+
+        main hr {
+            border: 0;
+            height: 1px;
+            background-color: #9c97f1;
+            margin: 35px 70px;
+        }
+
+        .secondSection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 40px 0;
+            display: flex;
+        }
+
+        .secondSection .vertical {
+            height: 100px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+
+        .image-top {
+            width: 30px;
+            position: relative;
+            top: -31px;
+            left: -13px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 70px;
+            width: 100px;
+        }
+
+        .vertical-desc {
+            position: relative;
+            top: 90px;
+            color: gray;
+            width: 170px;
+            font-size: 10px;
+        }
+
+        .text-white {
+            color: gray;
+        }
+
+        .thirdSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 80vh;
+        }
+
+        .thirdSection h1 {
+            font-size: 1.6rem;
+        }
+
+        main hr {
+            border: 0;
+            height: 1px;
+            background-color: #9c97f1;
+            margin: 35px 70px;
+        }
+
+        .thirdSection .box {
+            background: white;
+            width: 80vw;
+            height: 2px;
+            margin: 40px 0;
+            display: flex;
+        }
+
+        .thirdSection .p-vertical {
+            height: 100px;
+            width: 1px;
+            background-color: white;
+            margin: 0 120px;
+        }
+
+        .p-image-top {
+            width: 40px;
+            position: relative;
+            top: -40px;
+            left: -20px;
+        }
+
+        .p-vertical-title {
+            position: relative;
+            top: 70px;
+            width: 150px;
+        }
+
+        .p-vertical-desc {
+            position: relative;
+            top: 90px;
+            color: gray;
+            width: 170px;
+            font-size: 10px;
+        }
+
+        footer {
+            background-color: rgb(58, 29, 58);
+            /* height: 200px; */
+        }
+
+        .footer {
+            display: flex;
+            padding: 20px 120px;
+            justify-content: space-evenly;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer>div {
+            width: 200px;
+        }
+
+        .footer ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .footer ul li a:hover {
+            color: rgb(149, 149, 228);
+            font-size: 1.02rem;
+        }
+
+        .footer-third ul {
+            list-style: none;
+        }
+
+        .footer-third ul li {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-third ul li a img {
+            position: relative;
+            width: 28%;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px 0;
+        }
+
+        @media screen and (max-width: 1080px)  {
+            body {
+                /* background-color: red; */
+            }
+
+            .right {
+                overflow: hidden;
+                background-color: #191556;
+            }
+
+            .left {
+                display: flex;
+                justify-content: center;
+            }
+
+            .right a:not(:first-child) {
+                display: none;
+            }
+
+            .right a.icon {
+                float: right;
+                display: block;
+            }
+
+
+
+            main hr {
+                margin: 35px 13px;
+            }
+
+            /* .footer {
+                display: none;
+            } */
+
+            .box {
+                flex-direction: column;
+            }
+
+            .firstSection {
+                flex-direction: column-reverse;
+            }
+
+            .firstSection>div {
+                width: 63%;
+            }
+
+            .secondSection {
+                max-width: 80vw;
+                height: 50vh;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* justify-content: center; */
+            }
+
+            .secondSection .box {
+                width: 50vw;
+            }
+
+            .secondSection .vertical {
+                height: unset;
+            }
+
+            .secondSection .vertical .image-top {
+                width: 34px;
+                position: relative;
+                top: 112px;
+                left: -39px;
+            }
+
+            .vertical-title,
+            .vertical-desc {
+                left: 45px;
+            }
+
+            .thirdSection {
+                height: 40vh;
+                max-width: 80vw;
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* justify-content: center; */
+            }
+
+            .thirdSection .box {
+                width: 50vw;
+            }
+
+            .thirdSection .p-vertical {
+                height: unset;
+            }
+
+            .thirdSection .p-vertical .p-image-top {
+                width: 34px;
+                position: relative;
+                top: 112px;
+                left: -39px;
+            }
+
+            .p-vertical-title,
+            .p-vertical-desc {
+                left: 45px;
+            }
+
+            .leftSection {
+                width: 100% !important;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .leftSection .btn {
+                font-size: 13px;
+            }
+
+            .rightSection {
+                width: 369px !important;
+            }
+
+            .rightSection img {
+                width: 100%;
+            }
+
+            .secondSection {
+                max-width: 80vw;
+            }
+            
+            .footer-first {
+                margin: 0 38px;
+            }
+            .footer-second {
+                margin: 0 38px;
+            }
+
+            .footer-third {
+                margin: 0 55px;
+            }
+
+            .footer-third a {
+
+                width: 45px;
+            }
+
+            .footer-third ul li a img {
+                position: relative;
+                width: 62%;
+                height: 65%;
+            }
+        }
+
+        @media screen and (max-width: 1080px)  {
+            .right.responsive {
+                position: relative;
+            }
+
+            .right.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .right.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+        @media screen and (max-width: 700px)and (min-width: 400px){
+            .secondSection{
+                height: 207vh;
+            }
+            .thirdSection{
+                height: 150vh;
+            }
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="left">Saurav's Portfolio</div>
+            <div class="right" id="myTopnav">
+                <ul>
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#courses">Courses</a>
+                    <a href=".workexperience">Work Experience</a>
+                    <a href="#contact">Contact</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+            </div>
+
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                <div>Hi my name is <span class="purple">Saurav</span></div>
+                <div>and i am a passionate </div>
+
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"><a href="/Saurav Upadhyay CV DOC.docx">Download Resume</a></button>
+                    <!-- <button class="btn"><a href="sauravup2002@gmail.com">Hire Me</a></button> -->
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="bg.png" alt="">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span class="text-gray">What I have studied so far</span>
+            <h1>Courses</h1>
+            <div class="box">
+                <div class="vertical">
+                    <img class="image-top" src="EE.png" alt="">
+                    <div class="vertical-title">
+                        Electrical Engineer (2019-2023)
+                    </div>
+                    <div class="vertical-desc">
+                        I have done by graduation from Galgotia College of Engineering & Technology, the course duration
+                        was from 2019-2023. The degree name is B.Tech in the specialization of Electrical & Electronics
+                        Engineering.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="html.png" alt="">
+                    <div class="vertical-title">
+                        HTML Developer (2021-2022)
+                    </div>
+                    <div class="vertical-desc">
+                        I started working on HTML since my college announced a mock course for CSS organised by IIT
+                        Kanpur.
+                        So, i gave myself about 1year to HTML & CSS.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="nodejs.png" alt="">
+                    <div class="vertical-title">
+                        Node.Js Developer (2022~)
+                    </div>
+                    <div class="vertical-desc">
+                        After learning HTML & CSS. I came to know about JavaScript so i started using Node.Js along with
+                        HTML & CSS for Web Development.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img class="image-top" src="React.png" alt="">
+                    <div class="vertical-title">
+                        ReactJs Developer (2023~)
+                    </div>
+                    <div class="vertical-desc">
+                        I have learned ReactJs recently. And i am ready to show my expertise. 
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <hr>
+        <section class="thirdSection">
+            <span class="text-white">What i have done so far</span>
+            <h1>Work Experience</h1>
+            <div class="box">
+                <div class="p-vertical">
+                    <img class="p-image-top" src="Matrimony.png" alt="">
+                    <div class="p-vertical-title">
+                        Project 1: Brahmin Matrimony
+                    </div>
+                    <div class="p-vertical-desc">
+                        This project is all about making a clone of Shadi.com named as Brahmin Matrimony.
+                        <a href=" https://usaurav.github.io/Brahmin-Matrimony/">Project Link</a>
+                    </div>
+                </div>
+                <div class="p-vertical">
+                    <img class="p-image-top" src="Weather.png" alt="">
+                    <div class="p-vertical-title">
+                        Project 2: Weather App
+                    </div>
+                    <div class="p-vertical-desc">
+                        This project tell us about weather forecast of your city,which was designed using only HTML & CSS.
+                        <a href="https://usaurav.github.io/WeatherApp/">Project Link</a>
+                    </div>
+                </div>
+
+                <div class="p-vertical">
+                    <img class="p-image-top" src="Spotify.png" alt="">
+                    <div class="p-vertical-title">
+                        Project 3: Spotify Clone
+                    </div>
+                    <div class="p-vertical-desc">
+                        This project is all about making a clone of Spotify.
+                        <a href="https://usaurav.github.io/SpotifyClone/">Project Link</a>
+                    </div>
+                </div>
+
+                <div class="p-vertical">
+                    <img class="p-image-top" src="TicTac.png" alt="">
+                    <div class="p-vertical-title">
+                        Project 4: Tic-Tac-Toe game.
+                    </div>
+                    <div class="p-vertical-desc">
+                        With the help of Html5, CSS & JavaScript i develop a game. 
+                        <a href="https://usaurav.github.io/Tic-Tac-Toe/">Project Link</a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Saurav's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Courses</a></li>
+                    <li><a href="/">Work Experience</a></li>
+                    <li><a href="/">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+                    <li><a href="https://www.linkedin.com/public-profile/settings"><img src="linkedin.png"
+                                alt="linkedin"></a></li>
+                    <li><a href="https://github.com/usaurav"><img src="github.png" alt="github"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            Copyright &#169;sauravsportfolio.com | All rights reserved
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Web Designer', 'Electrical Engineer'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
